@@ -1,4 +1,12 @@
 export default function EmployeePage() {
+
+    const employees = [
+        {id: 1, name: "Alex" , position: "Frontend Developer" },
+        {id: 2, name: "Chris", position: "Backend Developer"},
+        {id: 3, name: "Joe", position: "Web Designer"},
+        {id: 4, name: "Mangboy" , position: "Janitor"}
+    ];
+
     return (
         <div className="space-y-6">
             <div className="flex flex-col gap-2">
@@ -8,12 +16,13 @@ export default function EmployeePage() {
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 {/* Placeholder cards for a premium feel */}
-                {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="p-6 bg-white border border-black rounded-xl hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all">
-                        <div className="h-4 w-24 bg-gray-200 rounded animate-pulse mb-4" />
-                        <div className="h-8 w-full bg-gray-100 rounded animate-pulse" />
+                  {employees.map((employee,index) => (
+                    <div key={index} className="p-6 bg-white border border-black rounded-xl hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all">
+                        <div className="h-4 w-24 font-extrabold mb-2">{employee.name}</div>
+                        <div className="h-8 w-full font-light italic">{employee.position}</div>
                     </div>
                 ))}
+
             </div>
 
             <div className="border border-black rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-4 bg-gray-50/50">
