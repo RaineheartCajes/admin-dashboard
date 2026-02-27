@@ -9,7 +9,7 @@ const menuItems = [
 
 export default function Sidebar() {
     return (
-        <aside className="w-64 border-r border-black h-[calc(100vh-4rem)] bg-white text-black flex flex-col justify-between p-4 hidden md:flex">
+        <aside className="w-64 border-r border-black h-[calc(100vh-4rem)] bg-white text-black flex-col justify-between p-4 hidden md:flex">
             <nav className="space-y-2">
                 {menuItems.map((item) => (
                     <a
